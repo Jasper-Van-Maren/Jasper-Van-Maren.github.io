@@ -41,19 +41,19 @@ body {
 }
 
 .jediUp {
-	background-image:url("images/jediUp.png");
+	background-image:url("images/JediUp.png");
 }
 
 .jediDown {
-	background-image:url("images/jediDwn.png");
+	background-image:url("images/JediDwn.png");
 }
 
 .jediLeft {
-	background-image:url("images/jediLeft.png");
+	background-image:url("images/JediLeft.png");
 }
 
 .jediRight {
-	background-image:url("images/jediRight.png");
+	background-image:url("images/JediRight.png");
 }
 
 .SaberJediUp {
