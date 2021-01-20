@@ -1,0 +1,122 @@
+body {
+	background-color:black;
+}
+
+#gameBoard {
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: 120px 120px 120px 120px 120px;
+	grid-template-rows: 120px 120px 120px 120px 120px;
+	justify-content: center;
+	width:600px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#gameBoard div {
+	background-color:grey;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.Saber {
+	background-image:url("images/lightSaber.png");
+}
+
+.flag {
+	background-image:url("images/Flag.png");
+}
+
+.gonkDown {
+	background-image:url("images/GonkDown.png");
+}
+
+.table {
+	background-image:url("images/tableUp.png");
+}
+
+.tableSide {
+	background-image:url("images/tableSide.png");
+}
+
+.jediUp {
+	background-image:url("images/jediUp.png");
+}
+
+.jediDown {
+	background-image:url("images/jediDwn.png");
+}
+
+.jediLeft {
+	background-image:url("images/jediLeft.png");
+}
+
+.jediRight {
+	background-image:url("images/jediRight.png");
+}
+
+.SaberJediUp {
+	background-image:url("images/SaberJediUp.png");
+}
+
+.SaberJediDown {
+	background-image:url("images/SaberJediDown.png");
+}
+
+.SaberJediLeft {
+	background-image:url("images/SaberJediLeft.png");
+}
+
+.SaberJediRight {
+	background-image:url("images/SaberJediRight.png");
+}
+
+.jumpUp {
+	background-image:url("images/JumpUp.png");
+}
+
+.jumpDown {
+	background-image:url("images/JumpDown.png");
+}
+
+.jumpLeft {
+	background-image:url("images/JumpLeft.png");
+}
+
+.jumpRight {
+	background-image:url("images/JumpRight.png");
+}
+
+.trooperUp {
+	background-image:url("images/trooperUp.png");
+}
+
+.trooperDown {
+	background-image:url("images/trooperDown.png");
+}
+
+.trooperLeft {
+	background-image:url("images/trooperLeft.png");
+}
+
+.trooperRight {
+	background-image:url("images/trooperRight.png");
+}
+
+.bridge {
+	background-color:#800020 !important;
+}
+
+.pit {
+	background-image:url("images/pit.png");
+}
+
+.post {
+	background-image:url("images/post.png");
+}
+
+
+
+
+
