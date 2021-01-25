@@ -8,44 +8,29 @@
     <link rel="stylesheet" href="game.css">  
     
     <!-- include an external JavaScript file -->
+	<script src="game.js"></script>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+
     
   </head>
   
   <body>
   
 	<div id="gameBoard">
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div> 
-		
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div> 
-		
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div> 
-		
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div> 
-		
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div> 
+		<script>
+		for (var i = 0;i < widthOfBoard;i++){
+			for (var j = 0;j < heightOfBoard;j++){
+			document.write("<div></div>");
+		}}
+		</script>
 	</div>
 	
-	<script src="game.js"></script>
+    <div class="message" id="win">You Win!!</div>
+    <div class="message" id="lose">You Lose :(</div>
+	<div class="message" id="levelUp">Next Level...</div>
+	
   </body>
   
 </html>

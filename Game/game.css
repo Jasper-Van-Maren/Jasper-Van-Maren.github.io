@@ -5,7 +5,7 @@ body {
 #gameBoard {
 	border: 1px solid black;
 	display: grid;
-	grid-template-columns: 120px 120px 120px 120px 120px;
+	grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
 	grid-template-rows: 120px 120px 120px 120px 120px;
 	justify-content: center;
 	width:600px;
@@ -20,7 +20,7 @@ body {
 	background-size:cover;
 }
 
-.Saber {
+.saber {
 	background-image:url("images/lightSaber.png");
 }
 
@@ -32,12 +32,8 @@ body {
 	background-image:url("images/GonkDown.png");
 }
 
-.table {
-	background-image:url("images/tableUp.png");
-}
-
-.tableSide {
-	background-image:url("images/tableSide.png");
+.bomb {
+	background-image:url("images/bomb.png");
 }
 
 .jediUp {
@@ -45,7 +41,7 @@ body {
 }
 
 .jediDown {
-	background-image:url("images/JediDwn.png");
+	background-image:url("images/JediDown.png");
 }
 
 .jediLeft {
@@ -56,22 +52,25 @@ body {
 	background-image:url("images/JediRight.png");
 }
 
-.SaberJediUp {
+.jediUpSaber {
 	background-image:url("images/SaberJediUp.png");
 }
 
-.SaberJediDown {
+.jediDownSaber {
 	background-image:url("images/SaberJediDown.png");
 }
 
-.SaberJediLeft {
+.jediLeftSaber {
 	background-image:url("images/SaberJediLeft.png");
 }
 
-.SaberJediRight {
+.jediRightSaber {
 	background-image:url("images/SaberJediRight.png");
 }
 
+.jump {
+    background-image: url("images/jump.png");
+}
 .jumpUp {
 	background-image:url("images/JumpUp.png");
 }
@@ -105,7 +104,7 @@ body {
 }
 
 .bridge {
-	background-color:#800020 !important;
+    border-bottom: 20px solid black !important;
 }
 
 .pit {
@@ -116,6 +115,21 @@ body {
 	background-image:url("images/Post.png");
 }
 
+.message {
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.8);
+	color:yellow;
+	font-family: 'Yusei Magic', sans-serif;
+	font-size:8em;
+	vertical-align:top;
+	text-align:center;
+	line-height:100vh;
+}
 
 
 
