@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Starwars Game</title>
+
+      <!-- include an external style sheet -->
+      <link rel="stylesheet" href="game.css">
+
+      <!-- include an external JavaScript file -->
+      <script src="game.js"></script>
+      <link type="text/css" rel="shortcut icon" href="images/favicon.ico" />
+      <link rel="preconnect" href="http://fonts.gstatic.com">
+      <link href="http://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+      <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+
+  </head>
+  
+  <body>
+      <div id="openingScreen">
+          <p class="start">Not too long ago in a galaxy<br><br>really really close....</p>
+          <div id="titles">
+              <div id="titlecontent">
+                  <p class="center">EPISODE XIX<br />SAVE YODA!</p>
+                  <p>It is a period of global crisis. An infectious disease caused by a newly discovered coronavirus has infected most of the planet's population. Toilet paper is scarce, so is hand sanitizer, people are scared.</p>
+                  <p>The world stays at home, is forced to watch Tiger King, and use Zoom as their only way to communicate. N95 masks and 6-FT social distancing are their only defense.</p>
+                  <p>Daily news briefs by Dr. Bonnie give the world hope, as the Rebel Doctors search the outer reaches of the galaxy for more respirators and rapid test kits.</p>
+                  <p>The world waits for a hero... </p>
+                  <p>Luke Skywalker is on quest to save Yoda. The legendary Jedi Master has the formula for a new vaccine that can save the world.</p>
+                  <p>Save Yoda, and save the world!</p>
+                  <p></p>
+                  <p class="center" style="color:red">Press any key to continue<br>Use WASD and Space to restart
+                  </p>
+
+              </div>
+          </div>
+      </div>
+      <div id="gameBoard" style="display:none;">
+          <script>
+              var theme = new sound("sounds/theme.mp3");
+              var roar = new sound("sounds/roar.mp3");
+              var win = new sound("sounds/win.mp3");
+              var force = new sound("sounds/force.wav");
+              var song = new sound("sounds/song.mp3");
+              var end = new sound("sounds/end.mp3");
+
+              for (var i = 0; i < widthOfBoard; i++) {
+                  for (var j = 0; j < heightOfBoard; j++) {
+                      document.write("<div></div>");
+                  }
+              }
+          </script>
+      </div>
+
+      <div id="closingScreen" style="display:none;">
+          <img src="images/end.jpg" width="100%" height="100%">
+      </div>
+
+      <div class="message" id="win">You Win!!</div>
+      <div class="message" id="lose">You Lose :( </div>
+      <div class="message" id="levelUp">Next Level...</div>
+
+  </body>
+  
+</html>
+
+
+
