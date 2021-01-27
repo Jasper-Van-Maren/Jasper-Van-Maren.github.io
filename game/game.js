@@ -27,7 +27,7 @@ var jumping = false;
 var currentLocationOfJedi = 0;
 var currentLocationOfEnemy = 0;
 var prevMove = "";
-var gameOver = false;
+var levelOver = false; 
 var gameStarted = false;
 var gameEnded = false;
 var currentAnimation;
@@ -56,7 +56,7 @@ document.addEventListener("keydown", function (e) {
     	animateEnemy(currentLocationOfEnemy, "right", false);
     }
     // play sound on key press otherwise we get error
-    if (gameStarted == true && gameOver != true && gameEnded != true && e.keyCode != 32) theme.play();
+    if (gameStarted == true && levelOver != true && gameEnded != true && e.keyCode != 32) theme.play();
 
     // check which key is pressed
 	switch (e.keyCode) {
@@ -73,10 +73,10 @@ document.addEventListener("keydown", function (e) {
 			tryToMove("Right");
 		break;
         case 32: // space bar: restart game if ended
-            if (gameOver == true && gameEnded != true) {
+            if (levelOver == true && gameEnded != true) {
                 setTimeout(function () {
                     currentLevel = 0;
-                    gameOver = false;
+                    levelOver = false;
                     document.getElementById("lose").style.display = "";
 		            clearTimeout(currentAnimation);
 		            clearTimeout(enemyAnimation);
@@ -218,7 +218,7 @@ function tryToMove(direction) {
 			document.getElementById("lose").style.display = "block";
             theme.stop();
             roar.play();
-            gameOver = true;
+            levelOver = true;
 			return;		
 		}//if
 
@@ -234,7 +234,7 @@ function levelUp(destClassName) {
     if (destClassName.indexOf("yoda") >= 0 && saberOn) {
         // show win or level up message
         if (currentLevel == 2) { // end of the game
-            gameOver = true;
+            levelOver = true;
             gameEnded = true;
             win.play();
    			document.getElementById("win").style.display = "block";
@@ -292,7 +292,7 @@ var horDifference = (index % widthOfBoard) - (currentLocationOfJedi % widthOfBoa
 var verDifference = Math.floor((index - currentLocationOfJedi) / widthOfBoard); // vertical difference between enemy and jedi
 var speed = currentLevel * 200; // speed at which enemy moves, faster each level
 
-    if (gameStarted == true && gameOver != true) {
+    if (gameStarted == true && levelOver != true) {
         // we are in the game
         enemyClassName = gridBoxes[index].className;
         if (force !== true) { // enemy can move on it's own
@@ -412,7 +412,7 @@ var speed = currentLevel * 200; // speed at which enemy moves, faster each level
 			    document.getElementById("lose").style.display = "block";
                 theme.stop();
                 roar.play();
-                gameOver = true;
+                levelOver = true;
 			    return;
 		    }//if
 
@@ -447,7 +447,7 @@ function sound(src) {
   this.stop = function(){
     this.sound.pause();
   };
-    this.reload = function () {
+  this.reload = function () {
     this.sound.load();
  };
 }
